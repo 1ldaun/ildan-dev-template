@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ildan Sharifullin - Frontend Developer</title>
+  <meta name="title" content="Ildan Sharifullin - Front-end developer.">
+  <meta name="description" content="Ildan Sharifullin personal site. Front-end developer.">
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="yandex-verification" content="107843043b84bafc" />
+  <link rel="shortcut icon" href="/img/favicons/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!--  @@include("../blocks/modules/header/header.html")
+  @@include("../blocks/modules/footer/footer.html") -->
+  <div id="app" :class="{'is-mobile-menu-open': mobileMenuOpen}">
+    <section id="top">
+      <header>
+        <a href="/">
+          <div class="logo">
+            <img src="/img/logo-grey2.png">
+          </div>
+        </a>
+        <div @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Mobile Menu" class="nav-toggle"><span class="menu-trigger"><i class="menu-trigger-bar top"></i><i class="menu-trigger-bar middle"></i><i class="menu-trigger-bar bottom"></i></span>
+        </div>
+        <nav itemscope itemtype="" class="navigation">
+          <ul>
+            <li><a href="#" v-scroll-to="'#works'" class="menu-link">Works</a></li>
+            <li><a href="#" @click="contactOpen = !contactOpen" class="menu-link">Contact</a></li>
+            <li>
+              <a href="#" class="menu-link">
+                <!--  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.919 285.919">
+                  <path d="M142.959 0C64.131 0 0 64.132 0 142.96s64.131 142.959 142.959 142.959 142.96-64.131 142.96-142.959S221.787 0 142.959 0zm0 260.919V25c65.043 0 117.96 52.917 117.96 117.96 0 65.043-52.917 117.959-117.96 117.959z"
+                    style="fill: #4c4f65;"></path>
+                </svg> -->
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="mobile-menu"><span @click="mobileMenuOpen = !mobileMenuOpen" class="close-trigger"><i class="close-trigger-bar left"></i><i class="close-trigger-bar right"></i></span>
+          <ul class="mobile-nav-links">
+            <li><a href="/" data-destination="home">Home</a></li>
+            <li class="in-single-work"><a href="#" @click="mobileMenuOpen = !mobileMenuOpen" v-scroll-to="{el: '#works', duration: 1700, offset: -50}" rel="nofollow" class="no-smoothState">All Works</a></li>
+            <li><a href="#" @click="mobileMenuOpen = !mobileMenuOpen; contactOpen = !contactOpen" class="no-smoothState open-contact">Contact</a></li>
+          </ul>
+          <ul class="nav-social-stripe">
+            <li><a href="https://t.me/d1sinterested" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+            <li><a href="https://vk.com/dis1nterested" target="_blank"><i class="fab fa-vk"></i></a></li>
+            <li><a href="mailto:sharfull33@gmail.ru" target="_blank"><i class="far fa-envelope"></i></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="big-logo">
+
+      </div>
+      <div class="name">
+        <div class="text-loading-mask">
+          <h1>Ildan Sharifullin</h1>
+          <div id="h1-mask" class="h-loading"></div>
+        </div>
+        <div class="text-loading-mask">
+          <h2>Front-end developer</h2>
+          <div id="h2-mask" class="h-loading h2-loading"></div>
+        </div>
+        <div class="button-mask" @click="contactOpen = !contactOpen">
+          <input id="about" type="button" value="About me" />
+          <span class="button-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+              <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
+            </svg>
+          </span>
+          <div id="btn-mask" class="h-loading btn-loading"></div>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+      <ul class="social-vertical-stripe">
+        <li><a href="https://t.me/d1sinterested" target="_blank"><i class="fab fa-telegram-plane" style="color: #4c4f65;"></i></a></li>
+        <li><a href="https://vk.com/dis1nterested" target="_blank"><i class="fab fa-vk" style="color: #4c4f65;"></i></a></li>
+        <li><a href="mailto:sharfull33@gmail.ru" target="_blank"><i class="far fa-envelope" style="color: #4c4f65;"></i></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </section>
+
+    <main>
+      <section id="works" class="works-section">
+        <div class="section-mask"></div>
+        <div class="content">
+          <div class="section-text-mask">
+            <h4 class="h5 section-subtitle">Case Studies</h4>
+          </div>
+          <div class="section-text-mask">
+            <h2 class="h3 section-title">Latest Works</h2>
+          </div>
+          <ul class="works-list">
+
+            <li>
+              <a href="https://delivery-food.ildan-dev.ru" class="work" style="background-image: url(img/delivery.png);">
+                <div class="work-mask"></div>
+                <div class="work-reveal-mask"></div>
+                <div class="work-mask-number">
+                  <div class="work-mask-back">01</div>
+                  <div class="work-mask-front">
+                    <div data-index="01" class="work-mask-overlay">01</div>
+                  </div>
+                </div>
+                <div class="work-text-section">
+                  <h3 itemprop="name" class="work-title">Delivery food</h3>
+                  <h5 itemprop="description" class="work-subtitle">Simple template (HTML5/CSS3/Vue.js) <br /> Google PageSpeed Insights score: 95-100</h5>
+                  <button class="the-button call-to-button">
+                    <span class="button-text">Case Study</span>
+                  </button>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="work" style="background-image: url(img/delivery.png);">
+                <div class="work-mask"></div>
+                <div class="work-reveal-mask"></div>
+                <div class="work-mask-number">
+                  <div class="work-mask-back">02</div>
+                  <div class="work-mask-front">
+                    <div data-index="02" class="work-mask-overlay">02</div>
+                  </div>
+                </div>
+                <div class="work-text-section">
+                  <h3 itemprop="name" class="work-title">Delivery food</h3>
+                  <h5 itemprop="description" class="work-subtitle">Simple template (HTML5/CSS3/Vue.js) <br /> Google PageSpeed Insights score: 95-100</h5>
+                  <button class="the-button call-to-button">
+                    <span class="button-text">Case Study</span>
+                  </button>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="work" style="background-image: url(img/delivery.png);">
+                <div class="work-mask"></div>
+                <div class="work-reveal-mask"></div>
+                <div class="work-mask-number">
+                  <div class="work-mask-back">03</div>
+                  <div class="work-mask-front">
+                    <div data-index="03" class="work-mask-overlay">03</div>
+                  </div>
+                </div>
+                <div class="work-text-section">
+                  <h3 itemprop="name" class="work-title">Delivery food</h3>
+                  <h5 itemprop="description" class="work-subtitle">Simple template (HTML5/CSS3/Vue.js) <br /> Google PageSpeed Insights score: 95-100</h5>
+                  <button class="the-button call-to-button">
+                    <span class="button-text">Case Study</span>
+                  </button>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+
+      </section>
+    </main>
+    <div class="about-contact" :class="{'contact-open': contactOpen}">
+      <div class="half-contact is-contact">
+        <button class="close" @click="contactOpen = !contactOpen">&times;</button>
+        <div class="contact-info">
+          <div class="skills">
+            <h3 class="contact-title">Skills</h3>
+
+            <h4 class="skills-subtitle">Web Development</h4>
+            <p class="contact-subtitle">Javascript, Node.js</p>
+
+            <h4 class="skills-subtitle">UI\UX Design</h4>
+            <p class="contact-subtitle">Photoshop, Illustrator, XD, Figma</p>
+
+            <h4 class="skills-subtitle">Frontend Development</h4>
+            <p class="contact-subtitle">HTML, CSS, SASS, Bootstrap, Wordpress</p>
+          </div>
+          <h3 class="contact-title">Let’s talk.</h3>
+          <p class="contact-subtitle">New projects, freelance inquiry or even a coffee.</p>
+          <ul class="contact-social">
+            <li><a href="https://t.me/d1sinterested"><i class="fab fa-telegram-plane" style="color: #f3f3f3;"></i></a></li>
+            <li><a href="https://vk.com/dis1nterested"><i class="fab fa-vk" style="color: #f3f3f3;"></i></a></li>
+            <li><a href="mailto:sharfull33@gmail.ru"><i class="far fa-envelope" style="color: #f3f3f3;"></i></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <div class="giga-text">Contact</div>
+        </div>
+
+      </div>
+      <div class="half-contact is-about">
+        <div class="giga-text">About</div>
+        <div class="contact-info">
+          <h3 class="about-me-title">About Me.</h3>
+          <h4 class="about-me-subtitle">Front-end developer.</h4>
+          <p class="about-me-text">I'm Ildan Sharifullin, a 17-year-old <strong>Freelance Front-end developer</strong>.<br>I like to <strong>resolve</strong> design
+            problems, <strong>create</strong> smart user interface and <strong>imagine</strong> useful interaction, developing rich web experiences &amp; <strong>web applications</strong> and interest templates.
+            <ul class="about-me-list">
+              <li class="vue">
+                <div class="about-me-list-label">Vue.js</div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+                  <path fill="#444" d="m-0.9879 26.003 156.19 0.497 44.8 76.49 44.8-76.49 155.23-0.495-199.99 345.04zm397.84 1.997-76.35 0.065-120.53 206.94-120.47-206.94-77.54-0.06 198.04 338.01z" transform="translate(.315 .634) scale(.31919)" />
+                </svg>
+              </li>
+              <li class="uiux">
+                <div class="about-me-list-label">UI/UX</div><svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+                  <path
+                    d="M74.6 96.7c1 0 1.9-.8 1.9-1.9s-.9-1.8-1.9-1.8H50.4c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9h24.2zM83.9 100.4H41.1c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9H84c1 0 1.9-.8 1.9-1.9s-.9-1.9-2-1.9zM20.6 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7 3.7 1.7 3.7 3.7-1.7 3.7-3.7 3.7zM37.3 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S39.4 24 37.3 24zM54.1 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S56.2 24 54.1 24z">
+                  </path>
+                  <path d="M7.5 7.2V119h111.8V7.2H7.5zm3.7 3.8h104.4v18.6H11.2V11zm104.4 104.3H11.2v-82h104.4v82z"></path>
+                  <path
+                    d="M47.5 81.4l1.7 1.4c.1 0 .1.1.2.1.4.3.7.5 1.1.7.2.1.5.3.7.4.4.2.7.4 1.1.6.3.2.6.3.9.5.3.1.6.3.9.4.6.3 1.3.5 1.9.7.2.1.5.1.7.2.5.1 1 .3 1.5.4.3.1.5.1.8.2.5.1 1 .2 1.5.2.2 0 .5.1.7.1.7.1 1.5.1 2.2.1s1.5 0 2.2-.1c.2 0 .5-.1.7-.1.5-.1 1-.1 1.5-.2.3 0 .5-.1.8-.1.5-.1 1-.2 1.5-.4.2-.1.4-.1.7-.2.6-.2 1.3-.4 1.9-.7.3-.1.6-.3.9-.4.3-.2.7-.3 1-.5.4-.2.7-.4 1-.6.2-.1.5-.3.7-.4.4-.2.7-.5 1.1-.7.1 0 .1-.1.2-.1l1.9-1.4-.1-.1c5.1-4.4 8.3-10.9 8.3-18.2C87.7 49.8 76.8 39 63.5 39S39.2 49.8 39.2 63.1c0 7.3 3.2 13.8 8.3 18.3zM58.4 83c-.7-.2-1.5-.4-2.2-.7-.1 0-.2-.1-.2-.1-.7-.3-1.5-.6-2.2-1l4.5-2.5c1.4-.8 2.3-2.2 2.3-3.8v-3.1l-.4-.5s-1.5-1.8-2.1-4.3l-.2-.9-.6-.4.1-2.8.6-.6v-4.9c0-.1-.1-1.4.8-2.5.9-1 2.5-1.5 4.8-1.5s3.9.5 4.8 1.5c1 1.1.8 2.4.8 2.5v4.1l.1.9.6.6v2.7c0 .1-.1.1-.1.1l-.9.3-.3.9c-.4 1.3-1 2.5-1.8 3.5-.2.2-.3.5-.5.6l-.5.5V75c0 1.6.9 3.1 2.4 3.9l4.8 2.4h-.1c-.7.3-1.3.6-2 .9-.1 0-.2.1-.3.1-.7.3-1.4.5-2.2.7-3.4.8-6.7.8-10 0 .1 0 0 0 0 0zm5-40.4c11.3 0 20.5 9.2 20.5 20.5 0 6.4-2.9 12.1-7.5 15.8-.1-.1-.2-.1-.3-.2l-6.5-3.2c-.2-.1-.3-.3-.3-.5v-1.9c.1-.1.2-.2.3-.4.8-1.1 1.5-2.4 2-3.8 1.1-.7 1.8-1.9 1.8-3.3v-2.7c0-.8-.2-1.5-.7-2.2v-3.1c.1-.7.1-3.1-1.7-5.2-1.6-1.8-4.2-2.8-7.6-2.8s-6 .9-7.6 2.8C54 54.5 54 57 54.1 57.6v3.1c-.4.6-.7 1.4-.7 2.2v2.7c0 1 .4 2 1.1 2.7.6 2.1 1.6 3.8 2.2 4.6V75c0 .2-.1.4-.3.5l-6 3.3c-.1 0-.1.1-.2.1-4.5-3.8-7.4-9.4-7.4-15.8.1-11.3 9.3-20.5 20.6-20.5z">
+                  </path>
+                </svg>
+              </li>
+              <li class="css-code">
+                <div class="about-me-list-label">is Fun.</div><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <path fill="#444"
+                    d="M16.017 21.044zM4.743 3.519L6.792 26.5l9.194 2.552 9.22-2.556 2.051-22.977H4.743zM23 8.775l-.693 7.767-.48 5.359-.042.476-5.781 1.603-5.773-1.603-.395-4.426h2.829l.201 2.248 3.142.847.008-.002h.002l3.134-.846.329-3.655h-6.579l-.056-.633-.129-1.429-.067-.756h7.081l.258-2.886H9.203l-.056-.634-.129-1.429-.067-.756h14.118l-.068.756z">
+                  </path>
+                </svg>
+              </li>
+              <li class="fun">
+                <div class="about-me-list-label">Semicolons.</div><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <path fill="#444"
+                    d="M.384.67v31.296H31.68V.67H.384zm16.334 26.772c-.461.937-1.342 1.553-2.362 1.85-1.568.36-3.067.155-4.183-.515-.747-.458-1.33-1.163-1.725-1.975.794-.485 1.586-.973 2.38-1.458.021.009.083.122.167.268.303.509.565.869 1.08 1.121.506.172 1.615.283 2.044-.607.262-.452.178-1.936.178-3.545 0-2.529.012-5.016.012-7.576h2.927c0 2.688.015 5.383 0 8.067.006 1.645.149 3.14-.518 4.369zm12.144-.827c-1.017 3.481-6.691 3.594-8.957 1.294-.479-.541-.779-.824-1.065-1.449 1.205-.693 1.205-.693 2.377-1.371.637.979 1.226 1.517 2.285 1.737 1.437.175 2.883-.318 2.559-1.844-.333-1.247-2.942-1.55-4.718-2.883-1.803-1.211-2.225-4.153-.744-5.834.494-.622 1.336-1.086 2.219-1.309l.922-.119c1.77-.036 2.877.431 3.689 1.339.226.229.41.476.756 1.012-.943.601-.94.595-2.291 1.47-.289-.622-.767-1.012-1.273-1.181-.785-.238-1.776.021-1.981.851-.071.256-.056.494.057.916.318.726 1.386 1.041 2.344 1.481 2.758 1.119 3.689 2.317 3.918 3.745.22 1.229-.054 2.026-.095 2.145z">
+                  </path>
+                </svg>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <footer itemscope="" itemtype="http://schema.org/WPFooter" class="footer">
+      <div class="content">
+        <a href="#" v-scroll-to="'#top'" class="footer-logo no-smoothstate">
+          <img src="img\svg\logo-white.png" alt="Ildan Sharifullin's Personal Logo">
+        </a>
+        <div class="inner-container text-center">
+          <div></div>
+          <ul class="footer-links">
+            <li><a href="https://t.me/d1sinterested" target="_blank" rel="noopener">Telegram</a></li>
+            <li><a href="https://vk.com/dis1nterested" target="_blank" rel="noopener">Vkontakte</a></li>
+            <li><a href="mailto:sharfull33@gmail.ru" target="_blank" rel="noopener">Email</a></li>
+          </ul>
+          <div></div>
+        </div>
+        <div class="footer-copy">© 2020 Ildan Sharifullin - <a href="mailto:sharfull33@gmail.ru" class="no-smoothState">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script>
+    window.onload = function() {
+      var h1_mask = document.getElementById('h1-mask');
+      var h2_mask = document.getElementById('h2-mask');
+      var btn_mask = document.getElementById('btn-mask');
+      h1_mask.classList.add('l-style');
+      h2_mask.classList.add('l-style');
+      btn_mask.classList.add('l-style');
+      /*  window.setTimeout(function () {
+        document.elem.classList.add('l-style');
+        document.elem.classList.remove('l-style');
+      }, 500); */
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        contactOpen: false,
+        mobileMenuOpen: false
+      }
+    });
+  </script>
+  <script src="js/main.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(61905811, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/61905811" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164676196-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164676196-1');
+</script>
+
+  <link rel="stylesheet" href="styles/all.min.css" async>
+</body>
+
+</html>
